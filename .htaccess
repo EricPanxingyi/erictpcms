@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  RewriteBase /
+
+#  RewriteRule ^news/$ /index.php?c=cat&id=5 [R=301,L]
+#  RewriteRule ^sports/$ /index.php?c=cat&id=4 [R=301,L]
+#  RewriteRule ^cars/$ /index.php?c=cat&id=3 [R=301,L]
+#  RewriteRule ^techs/$ /index.php?c=cat&id=7 [R=301,L]
+
+#  RewriteRule ^article/([0-9])+/([0-9]+)$  /newslist/$1/$2 [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>

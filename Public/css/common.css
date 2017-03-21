@@ -1,0 +1,4 @@
+.s_center {margin: auto;}
+.col-lg-13 {position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+@media (min-width:1800px){.col-lg-13{width: 30%;}}
+.form-signin-heading {text-align: center;}

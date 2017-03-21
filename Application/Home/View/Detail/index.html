@@ -1,0 +1,17 @@
+<include file="Common:header"/>
+<php>$vo = $result['news'];</php>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-9">
+                <div class="news-detail">
+                    <h1>{$vo.title}</h1>
+                    <div>{$vo.content}</div>
+                </div>
+            </div>
+            <!--网站右侧排行榜-->
+            <include file="Index:right"/>
+        </div>
+    </div>
+</section>
+<include file="Common:footer"/>

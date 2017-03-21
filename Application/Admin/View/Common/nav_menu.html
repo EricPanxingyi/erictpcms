@@ -1,0 +1,12 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav nav_list">
+        <li {$result['index']|getActive}>
+            <a href="/admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
+        </li>
+        <volist name="result['navs']" id="nav" key="k">
+            <li {$nav.c|getActive}>
+                <a href="{$nav|getMenuUrl}"><i class="fa fa-fw fa-bar-chart-o"></i> {$nav.name}</a>
+            </li>
+        </volist>
+    </ul>
+</div>

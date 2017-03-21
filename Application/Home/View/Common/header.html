@@ -1,0 +1,31 @@
+<php>$config = D("Basic")->readCache();</php>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$config.title}</title>
+    <meta name="keywords" content="{$config.keywords}"/>
+    <meta name="description" content="{$config.description}"/>
+    <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
+    <script src="/Public/js/jquery.js"></script>
+</head>
+<body>
+<header id="header">
+    <div class="navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/">
+                    <img src="/Public/images/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/" class="{:public_uri(1,CONTROLLER_NAME)}">首页</a></li>
+                <li><a href="/news/" target="_blank" class="{:public_uri(2)}">新闻</a></li>
+                <li><a href="/cars/" target="_blank" class="{:public_uri(3)}">汽车</a></li>
+                <li><a href="/sports/" target="_blank" class="{:public_uri(4)}">体育</a></li>
+                <li><a href="/techs/" target="_blank" class="{:public_uri(5)}">科技</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

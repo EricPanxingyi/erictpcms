@@ -1,0 +1,23 @@
+<div class="col-sm-3 col-md-3">
+    <div class="right-title">
+        <h3>文章排行</h3>
+        <span>TOP ARTICLES</span>
+    </div>
+    <div class="right-content">
+        <ul>
+            <volist name="result['rankNews']" id="vo" key="k">
+                <li class="num{$k} <if condition="$k eq 1">curr</if>">
+                <a href="/article/{$vo.catid}/{$vo.news_id}" target="_blank">{$vo.title|msubstr=###,0,12,"utf-8",true}</a>
+                <div style='<if condition="$k eq 1">display:block;<else/>display:none;</if>'>
+                    {$vo.description|msubstr=###,0,26,"utf-8",true}
+                </div>
+                </li>
+            </volist>
+        </ul>
+    </div>
+    <volist name="result['indexAdPic']" id="vo" >
+        <div class="right-hot">
+            <a href="{$vo.url}" target="_blank"><img src="{$vo.thumb}" alt="{$vo.title}"></a>
+        </div>
+    </volist>
+</div>
